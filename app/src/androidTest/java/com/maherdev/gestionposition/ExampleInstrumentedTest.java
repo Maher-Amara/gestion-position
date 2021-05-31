@@ -1,4 +1,4 @@
-package com.maherdev.gestionposition;
+package com.maherdev.gestionPosition;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.maherdev.gestionposition", appContext.getPackageName());
+        assertEquals("com.maherdev.gestionPosition", appContext.getPackageName());
     }
 }

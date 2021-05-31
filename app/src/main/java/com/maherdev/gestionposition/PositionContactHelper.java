@@ -1,4 +1,4 @@
-package com.maherdev.gestionposition;
+package com.maherdev.gestionPosition;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -1,4 +1,4 @@
-package com.maherdev.gestionposition;
+package com.maherdev.gestionPosition;
 
 import org.junit.Test;
 

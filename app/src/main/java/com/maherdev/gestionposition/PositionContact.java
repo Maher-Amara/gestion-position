@@ -1,4 +1,4 @@
-package com.maherdev.gestionposition;
+package com.maherdev.gestionPosition;
 
 public class PositionContact {
     int id;
@@ -26,3 +26,4 @@ public class PositionContact {
                 '}';
     }
 }
+

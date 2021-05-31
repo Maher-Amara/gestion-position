@@ -1,4 +1,4 @@
-package com.maherdev.gestionposition;
+package com.maherdev.gestionPosition;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -12,8 +12,8 @@ public class PositionContactManager {
     public  PositionContactManager(Context con){
         //PositionContactHelper.version++;
         PositionContactHelper helper=new PositionContactHelper(con,
-                PositionContactHelper.filename,
-                null,PositionContactHelper.version);
+                                                    PositionContactHelper.filename,
+                                            null,PositionContactHelper.version);
         db=helper.getWritableDatabase();
     }
     public long inserer(String num, String ps, String lon, String lat){
@@ -25,6 +25,13 @@ public class PositionContactManager {
         long a=db.insert(PositionContactHelper.table_position,null,v);
         return a;
     }
+    public void modif(ContentValues v, int id){
+        db.update(PositionContactHelper.table_position,v ,"col_id = ?s", new String[]{Integer.toString(id)});
+    }
+    /*
+    *modifier selon num
+    * chercher selon num ou pseudo
+     */
     public long supprimerSelonId (int id)
     {
         long a=0;

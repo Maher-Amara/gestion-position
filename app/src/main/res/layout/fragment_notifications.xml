@@ -20,6 +20,14 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/ed_rech_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="recherche"
+        android:inputType="textPersonName" />
+
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"

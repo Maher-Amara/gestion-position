@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="Position"
                 android:textAlignment="center"
-                android:textColor="#E91E63"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

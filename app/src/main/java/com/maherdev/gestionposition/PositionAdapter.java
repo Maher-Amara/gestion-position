@@ -1,4 +1,4 @@
-package com.maherdev.gestionposition;
+package com.maherdev.gestionPosition;
 
 import android.content.Context;
 import android.content.Intent;
@@ -57,7 +57,7 @@ public class PositionAdapter extends BaseAdapter {
         ImageButton sms = v.findViewById(R.id.imageButton2_sms);
         ImageButton map = v.findViewById(R.id.imageButton3_map);
         final ImageButton fav = v.findViewById(R.id.imageButton_fav);
-
+        ImageButton mod = v.findViewById(R.id.imageButton5_edit);
         final PositionContact pc= data.get(position);
         fav.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +76,15 @@ public class PositionAdapter extends BaseAdapter {
                     e.printStackTrace();
                 }
 
+            }
+        });
+        mod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(con,Modifier.class);
+                i.putExtra("id",pc.id);
+                con.startActivity(i);
             }
         });
         map.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +117,16 @@ public class PositionAdapter extends BaseAdapter {
 
             }
         });
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent();
+                i.setAction(Intent.ACTION_CALL);
+                i.setData(Uri.parse("tel:"+pc.numero));
+                con.startActivities(new Intent[]{i});
+
+            }
+        });
 
 
 
@@ -117,6 +136,6 @@ public class PositionAdapter extends BaseAdapter {
         tvlon.setText(pc.longitude);
         tvlat.setText(pc.latitude);
 
-        return null;
+        return v;
     }
 }
